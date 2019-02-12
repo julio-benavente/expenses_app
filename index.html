@@ -11,15 +11,16 @@
 
 </head>
 <body>
+	<!-- Start wraper -->
 	<div id="wraper">
 		<div id="main-buttons">
-			<button type="button" class="m-button">
+			<button id="income-btn" type="button" class="m-button">
 				<img src="https://img.icons8.com/dusk/32/000000/money-transfer.png">
 			Ingresos</button>
-			<button type="button" class="m-button">
+			<button id="balance-btn" type="button" class="m-button">
 				<img src="https://img.icons8.com/dusk/32/000000/bill.png">
 			Saldo</button>
-			<button type="button" class="m-button">
+			<button id="expenses-btn" type="button" class="m-button">
 				<img src="https://img.icons8.com/dusk/32/000000/cash-.png">
 			Gastos</button>
 		</div>
@@ -27,46 +28,35 @@
 			<p>Enero 2019</p>
 			<button id="expand-icon">
 				<div id="icon-container">
-					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-					width="20" height="20"
-					viewBox="0 0 224 224"
-					style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,224v-224h224v224z" fill="none"></path><g fill="#ffffff"><g id="surface1"><path d="M192.12981,25.84615c-1.71634,0 -36.17788,-1.71635 -65.49038,4.30769c-2.59134,0.875 -4.30769,1.71635 -4.30769,4.30769c-0.84134,2.59134 0,4.30769 1.71635,6.02404l17.23077,17.23077l-83.5625,83.5625l-17.23077,-17.23077c-1.71635,-1.71635 -4.30769,-2.55769 -6.02404,-1.71635c-2.59134,0.875 -3.43269,2.59134 -4.30769,4.30769c-5.18269,29.3125 -4.30769,63.77404 -4.30769,65.49038c0,1.71635 0.875,2.59135 1.71635,3.4327c0.875,0.875 2.59134,1.71635 3.46635,1.71635c1.71634,0 36.17788,1.75 65.45673,-4.30769c2.59134,-0.84135 4.30769,-1.71635 4.30769,-4.30769c0.875,-2.55769 0,-4.30769 -1.71635,-6.02404l-17.23077,-17.23077l83.5625,-83.5625l17.23077,17.23077c1.71635,1.71635 4.30769,2.59134 6.02404,1.71635c2.59134,-0.84134 3.46634,-2.59134 4.30769,-4.30769c6.89904,-28.4375 5.18269,-63.74039 5.18269,-64.61538c0,-1.71635 -0.875,-2.59134 -1.71635,-3.4327c-0.875,-1.71634 -2.59134,-1.71634 -4.30769,-2.59134z"></path></g></g></g></svg>
+					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 224 224" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,224v-224h224v224z" fill="none"></path><g fill="#ffffff"><g id="surface1"><path d="M192.12981,25.84615c-1.71634,0 -36.17788,-1.71635 -65.49038,4.30769c-2.59134,0.875 -4.30769,1.71635 -4.30769,4.30769c-0.84134,2.59134 0,4.30769 1.71635,6.02404l17.23077,17.23077l-83.5625,83.5625l-17.23077,-17.23077c-1.71635,-1.71635 -4.30769,-2.55769 -6.02404,-1.71635c-2.59134,0.875 -3.43269,2.59134 -4.30769,4.30769c-5.18269,29.3125 -4.30769,63.77404 -4.30769,65.49038c0,1.71635 0.875,2.59135 1.71635,3.4327c0.875,0.875 2.59134,1.71635 3.46635,1.71635c1.71634,0 36.17788,1.75 65.45673,-4.30769c2.59134,-0.84135 4.30769,-1.71635 4.30769,-4.30769c0.875,-2.55769 0,-4.30769 -1.71635,-6.02404l-17.23077,-17.23077l83.5625,-83.5625l17.23077,17.23077c1.71635,1.71635 4.30769,2.59134 6.02404,1.71635c2.59134,-0.84134 3.46634,-2.59134 4.30769,-4.30769c6.89904,-28.4375 5.18269,-63.74039 5.18269,-64.61538c0,-1.71635 -0.875,-2.59134 -1.71635,-3.4327c-0.875,-1.71634 -2.59134,-1.71634 -4.30769,-2.59134z"></path></g></g></g></svg>
 				</div>
 			</button>
 		</div>
-
-		<div class="income-sum">
+		
+		<!-- Start summary section -->
+		<div class="summary-section">
+			<div class="sum-income-section">
 			<div class="sum-sec1">
 				<div class="detail-box">
 					<div class="cat-box">
-						<p>Comida</p><div class="cat-inco-container"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-width="16" height="16"
-viewBox="0 0 224 224"
-style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,224v-224h224v224z" fill="none"></path><g fill="#ffffff"><path d="M196,47.88c0,22.86667 -24.36,48.90667 -61.41333,86.14667c-34.53333,33.88 -65.42667,62.16 -87.36,62.16c-5.69333,0 -10.73333,-1.96 -15.12,-6.16c-8.96,-7.37333 -13.44,-18.29333 -13.44,-32.38667c0,-11.94667 3.08,-20.53333 7.18667,-26.6c23.61333,2.24 37.05333,15.02667 37.52,15.58667l13.25333,-13.25333c-0.74667,-0.65333 -14.28,-14 -38.17333,-19.22667c2.70667,-16.05333 11.29333,-28.18667 23.89333,-34.44c24.54667,2.70667 42.93333,20.16 43.12,20.34667l13.06667,-13.44c-0.84,-0.84 -16.89333,-16.14667 -40.78667,-22.77333c4.66667,-13.16 14.56,-21.74667 29.02667,-25.01333c22.68,4.94667 34.25333,21.56 34.81333,22.30667l15.49333,-10.26667c-0.56,-0.93333 -9.89333,-14.56 -28.18667,-23.8c6.81333,-4.85333 15.58667,-8.4 29.21333,-8.4c18.2,0 37.89333,11.2 37.89333,29.21333z"></path></g></g></svg></div>
+						<p>Comida</p>
+						<div class="cat-inco-container"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16" height="16" viewBox="0 0 224 224" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,224v-224h224v224z" fill="none"></path><g fill="#ffffff"><path d="M196,47.88c0,22.86667 -24.36,48.90667 -61.41333,86.14667c-34.53333,33.88 -65.42667,62.16 -87.36,62.16c-5.69333,0 -10.73333,-1.96 -15.12,-6.16c-8.96,-7.37333 -13.44,-18.29333 -13.44,-32.38667c0,-11.94667 3.08,-20.53333 7.18667,-26.6c23.61333,2.24 37.05333,15.02667 37.52,15.58667l13.25333,-13.25333c-0.74667,-0.65333 -14.28,-14 -38.17333,-19.22667c2.70667,-16.05333 11.29333,-28.18667 23.89333,-34.44c24.54667,2.70667 42.93333,20.16 43.12,20.34667l13.06667,-13.44c-0.84,-0.84 -16.89333,-16.14667 -40.78667,-22.77333c4.66667,-13.16 14.56,-21.74667 29.02667,-25.01333c22.68,4.94667 34.25333,21.56 34.81333,22.30667l15.49333,-10.26667c-0.56,-0.93333 -9.89333,-14.56 -28.18667,-23.8c6.81333,-4.85333 15.58667,-8.4 29.21333,-8.4c18.2,0 37.89333,11.2 37.89333,29.21333z"></path></g></g></svg></div>
 					</div>
 					<div class="cat-box">
-						<p>Comida</p><div class="cat-inco-container"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-width="16" height="16"
-viewBox="0 0 224 224"
-style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,224v-224h224v224z" fill="none"></path><g fill="#ffffff"><path d="M196,47.88c0,22.86667 -24.36,48.90667 -61.41333,86.14667c-34.53333,33.88 -65.42667,62.16 -87.36,62.16c-5.69333,0 -10.73333,-1.96 -15.12,-6.16c-8.96,-7.37333 -13.44,-18.29333 -13.44,-32.38667c0,-11.94667 3.08,-20.53333 7.18667,-26.6c23.61333,2.24 37.05333,15.02667 37.52,15.58667l13.25333,-13.25333c-0.74667,-0.65333 -14.28,-14 -38.17333,-19.22667c2.70667,-16.05333 11.29333,-28.18667 23.89333,-34.44c24.54667,2.70667 42.93333,20.16 43.12,20.34667l13.06667,-13.44c-0.84,-0.84 -16.89333,-16.14667 -40.78667,-22.77333c4.66667,-13.16 14.56,-21.74667 29.02667,-25.01333c22.68,4.94667 34.25333,21.56 34.81333,22.30667l15.49333,-10.26667c-0.56,-0.93333 -9.89333,-14.56 -28.18667,-23.8c6.81333,-4.85333 15.58667,-8.4 29.21333,-8.4c18.2,0 37.89333,11.2 37.89333,29.21333z"></path></g></g></svg></div>
+						<p>Comida</p>
+						<div class="cat-inco-container"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16" height="16" viewBox="0 0 224 224" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,224v-224h224v224z" fill="none"></path><g fill="#ffffff"><path d="M196,47.88c0,22.86667 -24.36,48.90667 -61.41333,86.14667c-34.53333,33.88 -65.42667,62.16 -87.36,62.16c-5.69333,0 -10.73333,-1.96 -15.12,-6.16c-8.96,-7.37333 -13.44,-18.29333 -13.44,-32.38667c0,-11.94667 3.08,-20.53333 7.18667,-26.6c23.61333,2.24 37.05333,15.02667 37.52,15.58667l13.25333,-13.25333c-0.74667,-0.65333 -14.28,-14 -38.17333,-19.22667c2.70667,-16.05333 11.29333,-28.18667 23.89333,-34.44c24.54667,2.70667 42.93333,20.16 43.12,20.34667l13.06667,-13.44c-0.84,-0.84 -16.89333,-16.14667 -40.78667,-22.77333c4.66667,-13.16 14.56,-21.74667 29.02667,-25.01333c22.68,4.94667 34.25333,21.56 34.81333,22.30667l15.49333,-10.26667c-0.56,-0.93333 -9.89333,-14.56 -28.18667,-23.8c6.81333,-4.85333 15.58667,-8.4 29.21333,-8.4c18.2,0 37.89333,11.2 37.89333,29.21333z"></path></g></g></svg></div>
 					</div>
 					<div class="cat-box">
-						<p>Comida</p><div class="cat-inco-container"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-width="16" height="16"
-viewBox="0 0 224 224"
-style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,224v-224h224v224z" fill="none"></path><g fill="#ffffff"><path d="M196,47.88c0,22.86667 -24.36,48.90667 -61.41333,86.14667c-34.53333,33.88 -65.42667,62.16 -87.36,62.16c-5.69333,0 -10.73333,-1.96 -15.12,-6.16c-8.96,-7.37333 -13.44,-18.29333 -13.44,-32.38667c0,-11.94667 3.08,-20.53333 7.18667,-26.6c23.61333,2.24 37.05333,15.02667 37.52,15.58667l13.25333,-13.25333c-0.74667,-0.65333 -14.28,-14 -38.17333,-19.22667c2.70667,-16.05333 11.29333,-28.18667 23.89333,-34.44c24.54667,2.70667 42.93333,20.16 43.12,20.34667l13.06667,-13.44c-0.84,-0.84 -16.89333,-16.14667 -40.78667,-22.77333c4.66667,-13.16 14.56,-21.74667 29.02667,-25.01333c22.68,4.94667 34.25333,21.56 34.81333,22.30667l15.49333,-10.26667c-0.56,-0.93333 -9.89333,-14.56 -28.18667,-23.8c6.81333,-4.85333 15.58667,-8.4 29.21333,-8.4c18.2,0 37.89333,11.2 37.89333,29.21333z"></path></g></g></svg></div>
+						<p>Comida</p>
+						<div class="cat-inco-container"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16" height="16" viewBox="0 0 224 224" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,224v-224h224v224z" fill="none"></path><g fill="#ffffff"><path d="M196,47.88c0,22.86667 -24.36,48.90667 -61.41333,86.14667c-34.53333,33.88 -65.42667,62.16 -87.36,62.16c-5.69333,0 -10.73333,-1.96 -15.12,-6.16c-8.96,-7.37333 -13.44,-18.29333 -13.44,-32.38667c0,-11.94667 3.08,-20.53333 7.18667,-26.6c23.61333,2.24 37.05333,15.02667 37.52,15.58667l13.25333,-13.25333c-0.74667,-0.65333 -14.28,-14 -38.17333,-19.22667c2.70667,-16.05333 11.29333,-28.18667 23.89333,-34.44c24.54667,2.70667 42.93333,20.16 43.12,20.34667l13.06667,-13.44c-0.84,-0.84 -16.89333,-16.14667 -40.78667,-22.77333c4.66667,-13.16 14.56,-21.74667 29.02667,-25.01333c22.68,4.94667 34.25333,21.56 34.81333,22.30667l15.49333,-10.26667c-0.56,-0.93333 -9.89333,-14.56 -28.18667,-23.8c6.81333,-4.85333 15.58667,-8.4 29.21333,-8.4c18.2,0 37.89333,11.2 37.89333,29.21333z"></path></g></g></svg></div>
 					</div>
 					<div class="cat-box">
-						<p>Comida</p><div class="cat-inco-container"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-width="16" height="16"
-viewBox="0 0 224 224"
-style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,224v-224h224v224z" fill="none"></path><g fill="#ffffff"><path d="M196,47.88c0,22.86667 -24.36,48.90667 -61.41333,86.14667c-34.53333,33.88 -65.42667,62.16 -87.36,62.16c-5.69333,0 -10.73333,-1.96 -15.12,-6.16c-8.96,-7.37333 -13.44,-18.29333 -13.44,-32.38667c0,-11.94667 3.08,-20.53333 7.18667,-26.6c23.61333,2.24 37.05333,15.02667 37.52,15.58667l13.25333,-13.25333c-0.74667,-0.65333 -14.28,-14 -38.17333,-19.22667c2.70667,-16.05333 11.29333,-28.18667 23.89333,-34.44c24.54667,2.70667 42.93333,20.16 43.12,20.34667l13.06667,-13.44c-0.84,-0.84 -16.89333,-16.14667 -40.78667,-22.77333c4.66667,-13.16 14.56,-21.74667 29.02667,-25.01333c22.68,4.94667 34.25333,21.56 34.81333,22.30667l15.49333,-10.26667c-0.56,-0.93333 -9.89333,-14.56 -28.18667,-23.8c6.81333,-4.85333 15.58667,-8.4 29.21333,-8.4c18.2,0 37.89333,11.2 37.89333,29.21333z"></path></g></g></svg></div>
+						<p>Comida</p>
+						<div class="cat-inco-container"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16" height="16" viewBox="0 0 224 224" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,224v-224h224v224z" fill="none"></path><g fill="#ffffff"><path d="M196,47.88c0,22.86667 -24.36,48.90667 -61.41333,86.14667c-34.53333,33.88 -65.42667,62.16 -87.36,62.16c-5.69333,0 -10.73333,-1.96 -15.12,-6.16c-8.96,-7.37333 -13.44,-18.29333 -13.44,-32.38667c0,-11.94667 3.08,-20.53333 7.18667,-26.6c23.61333,2.24 37.05333,15.02667 37.52,15.58667l13.25333,-13.25333c-0.74667,-0.65333 -14.28,-14 -38.17333,-19.22667c2.70667,-16.05333 11.29333,-28.18667 23.89333,-34.44c24.54667,2.70667 42.93333,20.16 43.12,20.34667l13.06667,-13.44c-0.84,-0.84 -16.89333,-16.14667 -40.78667,-22.77333c4.66667,-13.16 14.56,-21.74667 29.02667,-25.01333c22.68,4.94667 34.25333,21.56 34.81333,22.30667l15.49333,-10.26667c-0.56,-0.93333 -9.89333,-14.56 -28.18667,-23.8c6.81333,-4.85333 15.58667,-8.4 29.21333,-8.4c18.2,0 37.89333,11.2 37.89333,29.21333z"></path></g></g></svg></div>
 					</div>
-					<!-- <div class="cat-box"></div> -->
-					<!-- <div class="cat-box"></div> -->
-					
 				</div>
 			</div>
+
 			<div class="sum-sec2">
 				<div class="detail-box">
 					<div class="cat-box">
@@ -85,69 +75,227 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
 						<div class="percentage-box">31.6%</div>
 						<div class="nominal"><p>$ 465.00</p></div>	
 					</div>
+				</div>
+			</div>
+			</div>
 
+			<!-- Start sum-expenses-section -->
+			<div class="sum-expenses-section">
+				<div class="sum-sec1">
+				<div class="detail-box">
+					<div class="cat-box">
+						<p>Comida</p>
+						<div class="cat-inco-container"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16" height="16" viewBox="0 0 224 224" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,224v-224h224v224z" fill="none"></path><g fill="#ffffff"><path d="M196,47.88c0,22.86667 -24.36,48.90667 -61.41333,86.14667c-34.53333,33.88 -65.42667,62.16 -87.36,62.16c-5.69333,0 -10.73333,-1.96 -15.12,-6.16c-8.96,-7.37333 -13.44,-18.29333 -13.44,-32.38667c0,-11.94667 3.08,-20.53333 7.18667,-26.6c23.61333,2.24 37.05333,15.02667 37.52,15.58667l13.25333,-13.25333c-0.74667,-0.65333 -14.28,-14 -38.17333,-19.22667c2.70667,-16.05333 11.29333,-28.18667 23.89333,-34.44c24.54667,2.70667 42.93333,20.16 43.12,20.34667l13.06667,-13.44c-0.84,-0.84 -16.89333,-16.14667 -40.78667,-22.77333c4.66667,-13.16 14.56,-21.74667 29.02667,-25.01333c22.68,4.94667 34.25333,21.56 34.81333,22.30667l15.49333,-10.26667c-0.56,-0.93333 -9.89333,-14.56 -28.18667,-23.8c6.81333,-4.85333 15.58667,-8.4 29.21333,-8.4c18.2,0 37.89333,11.2 37.89333,29.21333z"></path></g></g></svg></div>
+					</div>
+				</div>
+			</div>
 
+			<div class="sum-sec2">
+				<div class="detail-box">
+					<div class="cat-box">
+						<div class="percentage-box">31.6%</div>
+						<div class="nominal"><p>$ 465.00</p></div>	
+					</div>
+				</div>
+			</div>
+			</div>
+			<!-- End sum-expenses-section -->
+			<div class="sum-balance-section">
+				<div class="balance-graph">
+					<div class="balance-plus">
+						<div class="plus-sign">
+							<i class="fas fa-plus"></i>
+						</div>
+					</div>
+					<div class="balance-plus-graph"></div>
+					<div class="balance-minus-graph"></div>
+					<div class="balance-minus">
+						<div class="minus-sign">
+							<i class="fas fa-minus"></i>
+						</div>
+					</div>
+				</div>
+				<div class="balance-income">
+					<p>Ingresos</p>
+					<p>$ 711.00</p>
+				</div>
+				<div class="balance-expenses">
+					<p>Gastos</p>
+					<p>$ 470.00</p>
+				</div>
+				<div class="result-box1">
+					<p>Saldo</p>
+					<p>$ 241.00</p>
 				</div>
 			</div>
 		</div>
-	
+		<!-- End summary section -->
+
+
 	<section class="transactions-container">
 		<div class="transaction-header">
-			<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-width="16" height="16"
-viewBox="0 0 224 224"
-style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,224v-224h224v224z" fill="none"></path><g fill="#ffffff"><path d="M42,34.78125l-6.59896,14.67448l-16.73438,1.53125l12.43229,10.40885l-3.5,15.82292l14.40104,-8.49479l14.76562,8.49479l-4.26562,-15.82292l12.83333,-10.40885l-16.73438,-1.54948zM93.33333,46.66667v18.66667h112v-18.66667zM42,90.78125l-6.59896,14.67448l-16.73438,1.53125l12.43229,10.40885l-3.5,15.82292l14.40104,-8.4948l14.76562,8.4948l-4.26562,-15.82292l12.83333,-10.40885l-16.73438,-1.54948zM93.33333,102.66667v18.66667h112v-18.66667zM42,146.78125l-6.59896,14.67448l-16.73438,1.53125l12.43229,10.40885l-3.5,15.82292l14.40104,-8.4948l14.76562,8.4948l-4.26562,-15.82292l12.83333,-10.40885l-16.73438,-1.54948zM93.33333,158.66667v18.66667h112v-18.66667z"></path></g></g></svg>
+			<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16" height="16" viewBox="0 0 224 224" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,224v-224h224v224z" fill="none"></path><g fill="#ffffff"><path d="M42,34.78125l-6.59896,14.67448l-16.73438,1.53125l12.43229,10.40885l-3.5,15.82292l14.40104,-8.49479l14.76562,8.49479l-4.26562,-15.82292l12.83333,-10.40885l-16.73438,-1.54948zM93.33333,46.66667v18.66667h112v-18.66667zM42,90.78125l-6.59896,14.67448l-16.73438,1.53125l12.43229,10.40885l-3.5,15.82292l14.40104,-8.4948l14.76562,8.4948l-4.26562,-15.82292l12.83333,-10.40885l-16.73438,-1.54948zM93.33333,102.66667v18.66667h112v-18.66667zM42,146.78125l-6.59896,14.67448l-16.73438,1.53125l12.43229,10.40885l-3.5,15.82292l14.40104,-8.4948l14.76562,8.4948l-4.26562,-15.82292l12.83333,-10.40885l-16.73438,-1.54948zM93.33333,158.66667v18.66667h112v-18.66667z"></path></g></g></svg>
 			<p>Transacciones de hoy</p>
 		</div>
 		<div class="transaction">
-			
+			<div class="transaction-sec1">
 				<div class="cat-box">
-				<div class="cat-inco-container"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-width="16" height="16"
-viewBox="0 0 224 224"
-style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,224v-224h224v224z" fill="none"></path><g fill="#ffffff"><path d="M196,47.88c0,22.86667 -24.36,48.90667 -61.41333,86.14667c-34.53333,33.88 -65.42667,62.16 -87.36,62.16c-5.69333,0 -10.73333,-1.96 -15.12,-6.16c-8.96,-7.37333 -13.44,-18.29333 -13.44,-32.38667c0,-11.94667 3.08,-20.53333 7.18667,-26.6c23.61333,2.24 37.05333,15.02667 37.52,15.58667l13.25333,-13.25333c-0.74667,-0.65333 -14.28,-14 -38.17333,-19.22667c2.70667,-16.05333 11.29333,-28.18667 23.89333,-34.44c24.54667,2.70667 42.93333,20.16 43.12,20.34667l13.06667,-13.44c-0.84,-0.84 -16.89333,-16.14667 -40.78667,-22.77333c4.66667,-13.16 14.56,-21.74667 29.02667,-25.01333c22.68,4.94667 34.25333,21.56 34.81333,22.30667l15.49333,-10.26667c-0.56,-0.93333 -9.89333,-14.56 -28.18667,-23.8c6.81333,-4.85333 15.58667,-8.4 29.21333,-8.4c18.2,0 37.89333,11.2 37.89333,29.21333z"></path></g></g></svg></div>
-				<p>Comida</p>
+					<div class="cat-inco-container">
+					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"width="16" height="16"viewBox="0 0 224 224"style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,224v-224h224v224z" fill="none"></path><g fill="#ffffff"><path d="M196,47.88c0,22.86667 -24.36,48.90667 -61.41333,86.14667c-34.53333,33.88 -65.42667,62.16 -87.36,62.16c-5.69333,0 -10.73333,-1.96 -15.12,-6.16c-8.96,-7.37333 -13.44,-18.29333 -13.44,-32.38667c0,-11.94667 3.08,-20.53333 7.18667,-26.6c23.61333,2.24 37.05333,15.02667 37.52,15.58667l13.25333,-13.25333c-0.74667,-0.65333 -14.28,-14 -38.17333,-19.22667c2.70667,-16.05333 11.29333,-28.18667 23.89333,-34.44c24.54667,2.70667 42.93333,20.16 43.12,20.34667l13.06667,-13.44c-0.84,-0.84 -16.89333,-16.14667 -40.78667,-22.77333c4.66667,-13.16 14.56,-21.74667 29.02667,-25.01333c22.68,4.94667 34.25333,21.56 34.81333,22.30667l15.49333,-10.26667c-0.56,-0.93333 -9.89333,-14.56 -28.18667,-23.8c6.81333,-4.85333 15.58667,-8.4 29.21333,-8.4c18.2,0 37.89333,11.2 37.89333,29.21333z"></path></g></g></svg></div>
+					<p>Comida</p>
 				</div>
 				<div class="tran-import">
 					<p>$ 58.00</p>
 				</div>
-			
+			</div>
+			<div class="transaction-sec2">
+				<div class="transaction-note-box">
+					<p>Nota:</p>
+					<p class="transaction-note">No hay notas addicionales</p>
+				</div>
+			</div>
 		</div>
-		<div class="transaction">
-			
-				<div class="cat-box">
-				<div class="cat-inco-container"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-width="16" height="16"
-viewBox="0 0 224 224"
-style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,224v-224h224v224z" fill="none"></path><g fill="#ffffff"><path d="M196,47.88c0,22.86667 -24.36,48.90667 -61.41333,86.14667c-34.53333,33.88 -65.42667,62.16 -87.36,62.16c-5.69333,0 -10.73333,-1.96 -15.12,-6.16c-8.96,-7.37333 -13.44,-18.29333 -13.44,-32.38667c0,-11.94667 3.08,-20.53333 7.18667,-26.6c23.61333,2.24 37.05333,15.02667 37.52,15.58667l13.25333,-13.25333c-0.74667,-0.65333 -14.28,-14 -38.17333,-19.22667c2.70667,-16.05333 11.29333,-28.18667 23.89333,-34.44c24.54667,2.70667 42.93333,20.16 43.12,20.34667l13.06667,-13.44c-0.84,-0.84 -16.89333,-16.14667 -40.78667,-22.77333c4.66667,-13.16 14.56,-21.74667 29.02667,-25.01333c22.68,4.94667 34.25333,21.56 34.81333,22.30667l15.49333,-10.26667c-0.56,-0.93333 -9.89333,-14.56 -28.18667,-23.8c6.81333,-4.85333 15.58667,-8.4 29.21333,-8.4c18.2,0 37.89333,11.2 37.89333,29.21333z"></path></g></g></svg></div>
-				<p>Comida</p>
-				</div>
-				<div class="tran-import">
-					<p>$ 58.00</p>
-				</div>
-			
+		<div class="balance-sec">
+			<p>Saldo de hoy</p>
+			<p>$ 55.00</p>
 		</div>
-		<div class="transaction">
-			
-				<div class="cat-box">
-				<div class="cat-inco-container"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-width="16" height="16"
-viewBox="0 0 224 224"
-style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,224v-224h224v224z" fill="none"></path><g fill="#ffffff"><path d="M196,47.88c0,22.86667 -24.36,48.90667 -61.41333,86.14667c-34.53333,33.88 -65.42667,62.16 -87.36,62.16c-5.69333,0 -10.73333,-1.96 -15.12,-6.16c-8.96,-7.37333 -13.44,-18.29333 -13.44,-32.38667c0,-11.94667 3.08,-20.53333 7.18667,-26.6c23.61333,2.24 37.05333,15.02667 37.52,15.58667l13.25333,-13.25333c-0.74667,-0.65333 -14.28,-14 -38.17333,-19.22667c2.70667,-16.05333 11.29333,-28.18667 23.89333,-34.44c24.54667,2.70667 42.93333,20.16 43.12,20.34667l13.06667,-13.44c-0.84,-0.84 -16.89333,-16.14667 -40.78667,-22.77333c4.66667,-13.16 14.56,-21.74667 29.02667,-25.01333c22.68,4.94667 34.25333,21.56 34.81333,22.30667l15.49333,-10.26667c-0.56,-0.93333 -9.89333,-14.56 -28.18667,-23.8c6.81333,-4.85333 15.58667,-8.4 29.21333,-8.4c18.2,0 37.89333,11.2 37.89333,29.21333z"></path></g></g></svg></div>
-				<p>Comida</p>
-				</div>
-				<div class="tran-import">
-					<p>$ 58.00</p>
-				</div>
-			
-		</div>
+
 	</section>
+	
+
+	<!-- Start data complete section -->
+	<section id="data-complete">
+		<div class="close-data-complete">
+			<p>Graficos</p>
+			<i class="fas fa-chevron-left"></i>
+		</div>
+		<div id="main-buttons-complete">
+			<button id="income-btn-complete" type="button" class="m-button">
+				<img src="https://img.icons8.com/dusk/32/000000/money-transfer.png">
+			Ingresos</button>
+			<button id="balance-btn-complete" type="button" class="m-button">
+				<img src="https://img.icons8.com/dusk/32/000000/bill.png">
+			Saldo</button>
+			<button id="expenses-btn-complete" type="button" class="m-button">
+				<img src="https://img.icons8.com/dusk/32/000000/cash-.png">
+			Gastos</button>
+		</div>
+		<!-- Start summary section -->
+		<div class="complete-section">
+			<div class="comp-income-section">
+			<div class="sum-sec1">
+				<div class="detail-box">
+					<div class="cat-box">
+						<p>Comida</p>
+						<div class="cat-inco-container"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16" height="16" viewBox="0 0 224 224" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,224v-224h224v224z" fill="none"></path><g fill="#ffffff"><path d="M196,47.88c0,22.86667 -24.36,48.90667 -61.41333,86.14667c-34.53333,33.88 -65.42667,62.16 -87.36,62.16c-5.69333,0 -10.73333,-1.96 -15.12,-6.16c-8.96,-7.37333 -13.44,-18.29333 -13.44,-32.38667c0,-11.94667 3.08,-20.53333 7.18667,-26.6c23.61333,2.24 37.05333,15.02667 37.52,15.58667l13.25333,-13.25333c-0.74667,-0.65333 -14.28,-14 -38.17333,-19.22667c2.70667,-16.05333 11.29333,-28.18667 23.89333,-34.44c24.54667,2.70667 42.93333,20.16 43.12,20.34667l13.06667,-13.44c-0.84,-0.84 -16.89333,-16.14667 -40.78667,-22.77333c4.66667,-13.16 14.56,-21.74667 29.02667,-25.01333c22.68,4.94667 34.25333,21.56 34.81333,22.30667l15.49333,-10.26667c-0.56,-0.93333 -9.89333,-14.56 -28.18667,-23.8c6.81333,-4.85333 15.58667,-8.4 29.21333,-8.4c18.2,0 37.89333,11.2 37.89333,29.21333z"></path></g></g></svg></div>
+					</div>
+					<div class="cat-box">
+						<p>Comida</p>
+						<div class="cat-inco-container"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16" height="16" viewBox="0 0 224 224" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,224v-224h224v224z" fill="none"></path><g fill="#ffffff"><path d="M196,47.88c0,22.86667 -24.36,48.90667 -61.41333,86.14667c-34.53333,33.88 -65.42667,62.16 -87.36,62.16c-5.69333,0 -10.73333,-1.96 -15.12,-6.16c-8.96,-7.37333 -13.44,-18.29333 -13.44,-32.38667c0,-11.94667 3.08,-20.53333 7.18667,-26.6c23.61333,2.24 37.05333,15.02667 37.52,15.58667l13.25333,-13.25333c-0.74667,-0.65333 -14.28,-14 -38.17333,-19.22667c2.70667,-16.05333 11.29333,-28.18667 23.89333,-34.44c24.54667,2.70667 42.93333,20.16 43.12,20.34667l13.06667,-13.44c-0.84,-0.84 -16.89333,-16.14667 -40.78667,-22.77333c4.66667,-13.16 14.56,-21.74667 29.02667,-25.01333c22.68,4.94667 34.25333,21.56 34.81333,22.30667l15.49333,-10.26667c-0.56,-0.93333 -9.89333,-14.56 -28.18667,-23.8c6.81333,-4.85333 15.58667,-8.4 29.21333,-8.4c18.2,0 37.89333,11.2 37.89333,29.21333z"></path></g></g></svg></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="sum-sec2">
+				<div class="detail-box">
+					<div class="cat-box">
+						<div class="percentage-box">31.6%</div>
+						<div class="nominal"><p>$ 465.00</p></div>	
+					</div>
+					<div class="cat-box">
+						<div class="percentage-box">31.6%</div>
+						<div class="nominal"><p>$ 465.00</p></div>	
+					</div>
+				</div>
+					
+			</div>
+			<div class="result-box1">
+				<p>Numero de transacciones</p>
+				<p>5</p>
+			</div>
+			<div class="result-box2">
+				<p>Cantidad total de los ingresos</p>
+				<p>$ 241.00</p>
+			</div>
+
+			</div>
+		
+
+			<!-- Start complete expenses section -->
+			<div class="comp-expenses-section">
+				<div class="sum-sec1">
+				<div class="detail-box">
+					<div class="cat-box">
+						<p>Comida</p>
+						<div class="cat-inco-container"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16" height="16" viewBox="0 0 224 224" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,224v-224h224v224z" fill="none"></path><g fill="#ffffff"><path d="M196,47.88c0,22.86667 -24.36,48.90667 -61.41333,86.14667c-34.53333,33.88 -65.42667,62.16 -87.36,62.16c-5.69333,0 -10.73333,-1.96 -15.12,-6.16c-8.96,-7.37333 -13.44,-18.29333 -13.44,-32.38667c0,-11.94667 3.08,-20.53333 7.18667,-26.6c23.61333,2.24 37.05333,15.02667 37.52,15.58667l13.25333,-13.25333c-0.74667,-0.65333 -14.28,-14 -38.17333,-19.22667c2.70667,-16.05333 11.29333,-28.18667 23.89333,-34.44c24.54667,2.70667 42.93333,20.16 43.12,20.34667l13.06667,-13.44c-0.84,-0.84 -16.89333,-16.14667 -40.78667,-22.77333c4.66667,-13.16 14.56,-21.74667 29.02667,-25.01333c22.68,4.94667 34.25333,21.56 34.81333,22.30667l15.49333,-10.26667c-0.56,-0.93333 -9.89333,-14.56 -28.18667,-23.8c6.81333,-4.85333 15.58667,-8.4 29.21333,-8.4c18.2,0 37.89333,11.2 37.89333,29.21333z"></path></g></g></svg></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="sum-sec2">
+				<div class="detail-box">
+					<div class="cat-box">
+						<div class="percentage-box">31.6%</div>
+						<div class="nominal"><p>$ 465.00</p></div>	
+					</div>
+					
+				</div>
+			</div>
+			<div class="result-box1">
+				<p>Numero de transacciones</p>
+				<p>5</p>
+			</div>
+			<div class="result-box2">
+				<p>Cantidad total de los gastos</p>
+				<p>$ 241.00</p>
+			</div>
+			</div>
+			<!-- End complete expenses section -->
+			<!-- Start coplete balance section -->
+			<div class="comp-balance-section">
+				<div class="balance-graph">
+					<div class="balance-plus">
+						<div class="plus-sign">
+							<i class="fas fa-plus"></i>
+						</div>
+					</div>
+					<div class="balance-plus-graph"></div>
+					<div class="balance-minus-graph"></div>
+					<div class="balance-minus">
+						<div class="minus-sign">
+							<i class="fas fa-minus"></i>
+						</div>
+					</div>
+				</div>
+				<div class="balance-income">
+					<p>Ingresos</p>
+					<p>$ 711.00</p>
+				</div>
+				<div class="balance-expenses">
+					<p>Gastos</p>
+					<p>$ 470.00</p>
+				</div>
+				<div class="result-box1">
+					<p>Numero de transacciones</p>
+					<p>5</p>
+				</div>
+				<div class="result-box2">
+					<p>Saldo</p>
+					<p>$ 241.00</p>
+				</div>
+			</div>
+		</div>
+		<!-- End Complete  section -->
+	</section>
+	<!-- End data complete section -->
 	</div>
+	<!-- End Wraper -->
 
 
 
 	<script src="js/j-query.js"></script>
 	<!-- <script src="js/bootstrap.min.js"></script> -->
 	<script src="js/main.js"></script>
+	<script src="js/calendar.js"></script>
 </body>
 </html>

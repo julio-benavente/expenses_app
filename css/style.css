@@ -2,6 +2,7 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	/*font-size: 14px;*/
 }
 
 body {
@@ -21,7 +22,20 @@ body {
 	overflow-x: hidden;
 }
 
-#main-buttons {
+
+#wraper::after {
+	content: "";
+	background-image: url(../img/bground-2.jpeg);
+	opacity: 0.3;
+	top: 0;
+ 	left: 0;
+ 	bottom: 0;
+ 	right: 0;
+ 	position: absolute;
+ 	z-index: -1; 
+}
+
+#main-buttons, #main-buttons-complete {
 	width: 100%;
 	height: 60px;
 	background: #34495e;
@@ -29,7 +43,7 @@ body {
 	color: #fff;
 }
 
-#main-buttons .m-button {
+.m-button {
 	display: flex;
 	flex-basis: 33.333%;
 	border: none;
@@ -43,12 +57,12 @@ body {
 }
 
 
-#main-buttons .m-button:active {
+.m-button:active {
 	background: #486684;
 }
 
 
-#main-buttons .m-button img {
+.m-button img {
 	margin: 5px;
 }
 
@@ -63,17 +77,18 @@ body {
 	
 }
 
-#acutal-month:before {
+#acutal-month:after,
+{
 	content: '';
 	display: block;
 	width: 100%;
 	height: 1px;
 	background: transparent;
 	position: absolute;
-	bottom: 1px;
+	bottom: 0px;
 	left: 1px;
-	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
-	z-index: -5;
+	box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
+	z-index: 1;
 }
 
 #acutal-month #expand-icon {
@@ -90,6 +105,7 @@ body {
 	box-sizing: content-box;
 	outline: none;
 	cursor: pointer;
+	z-index: 2;
 }
 
 #acutal-month #expand-icon svg {
@@ -116,25 +132,171 @@ body {
 	border: none;
 }
 
-.income-sum {
+.sum-income-section,
+.sum-expenses-section,
+.sum-balance-section,
+.comp-income-section,
+.comp-expenses-section,
+.comp-balance-section
+{
 	width: 100%;
 	height: 250px;
 	background: #fff;
-	/*border: 1px solid black;*/
 	display: flex;
+	flex-wrap: wrap;
 	margin: 0;
 	justify-content: center;
-	padding-top: 20px;
+	padding: 20px 10px 10px;
+	position: relative;
+}
+
+.comp-income-section,
+.comp-expenses-section,
+.comp-balance-section
+{
+	height: auto;
+}
+
+
+
+/*.sum-income-section {
+	display: flex;
+}
+
+.sum-expenses-section {
+	display: flex;
+}
+*/
+.sum-balance-section,
+.comp-balance-section
+{
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.balance-graph,
+.balance-income,
+.balance-expenses,
+.result-box1,
+.result-box2
+{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 40px;
+	font-size: 14px;
+	padding: 0 5px;
+}
+
+
+.balance-income {
+	color: rgba(5, 196, 107,1.0);
+}
+
+.balance-expenses {
+	color: rgba(245, 59, 87,1.0);
+}
+
+.result-box1
+{
+	background: rgba(164, 176, 190, 0.2);
+	border-top: 1.2px dashed rgba(164, 176, 190, 0.7);
+	margin-top: 10px;
 
 }
 
+
+.result-box2
+{
+	background: rgba(164, 176, 190, 0.5);
+	border-top: 1.2px dashed rgba(164, 176, 190, 0.7);
+	z-index: 5;
+	/*margin-bottom: 3px;*/
+}
+
+.result-box2:after
+{
+	content: '';
+	display: block;
+	width: calc(100% - 20px);
+	height: 1px;
+	background: transparent;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	box-shadow: 0px 2px 5px 0px red;
+	z-index: 1;
+}
+
+.balance-graph .balance-plus, .balance-graph .balance-minus {
+	width: 30px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*border: 1px solid black;*/
+	border: none;
+	outline: none;
+}
+
+.balance-graph .balance-plus {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	background: rgba(33, 140, 116,1.0);
+}
+
+.balance-graph .balance-minus {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background: rgba(179, 57, 57,1.0);
+}
+
+.balance-graph .plus-sign, .balance-graph .minus-sign {
+	/*border: 1px solid black;*/
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	font-size: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.balance-graph .balance-plus-graph, .balance-graph .balance-minus-graph {
+	height: 30px;
+	/*border: 1px solid black;*/
+
+} 
+
+.balance-graph .balance-plus-graph {
+	flex-basis: 30%;
+	background: rgba(33, 140, 116,1.0);
+}
+
+.balance-graph .balance-minus-graph {
+	flex-basis: 70%;
+	background: rgba(179, 57, 57,1.0);
+}
+
+
+
+
+.display-none {
+	display: none;
+}
+
 .sum-sec1 {
-	flex-basis: 40%;
+	flex-basis: 35%;
 	height: 100%;
 }
 
 .sum-sec2 {
-	flex-basis: 60%;
+	flex-basis: 65%;
 	height: 100%;
 }
 
@@ -144,26 +306,20 @@ body {
 	flex-direction: column;
 	width: 100%;
 	height: 100%;
-	/*border-top: 1.2px solid #f2f2f2;*/
 	border-right: 1.2px solid #f2f2f2;
-	/*border-bottom: 1.2px solid #f2f2f2;*/
 	box-shadow: 5px 0 10px -5px #b3b3b3;
-	padding-left: 5px;
-	padding: 10px;
-
 }
 
 .sum-sec1 .detail-box .cat-box {
 	width: 100%;
 	height: 57px;
-	/*border: 1px solid black;*/
 	text-align: center;
 	display: flex;
 	align-items: center;
 	position: relative;
 	justify-content: flex-end;
 	padding: 5px;
-	border-bottom: 2px solid #f2f2f2; 
+	border-bottom: 1.2px solid #f2f2f2; 
 }
 
 .sum-sec1 .detail-box .cat-box:last-of-type {
@@ -197,8 +353,8 @@ body {
 	flex-direction: column;
 	width: 100%;
 	height: 100%;
-	padding-left: 5px;
-	padding: 10px;
+	padding-left: 10px;
+
 }
 
 .sum-sec2 .detail-box .cat-box {
@@ -213,7 +369,7 @@ body {
 	padding: 5px;
 	font-size: 12px;
 
-	border-bottom: 2px solid #f2f2f2; 
+	border-bottom: 1.2px solid #f2f2f2; 
 }
 
 .sum-sec2 .detail-box .cat-box:last-of-type {
@@ -231,21 +387,51 @@ body {
 	border-radius: 3px;
 }
 
+/*Transactions section*/
 section.transactions-container {
 	width: 100%;
 	height: 200px;
-	/*padding: 5px 8px 0px;*/
 }
 
 section.transactions-container .transaction-header{
 	width: 100%;
-	height: 35px;
+	height: 30px;
 	background: #27ae60;
 	color: #fff;
 	padding: 0 10px;
 	position: relative;
 	display: flex;
 	align-items: center;
+}
+
+section.transactions-container .transaction-header svg {
+	margin: 10px;
+	
+}
+
+section.transactions-container .transaction {
+	display: flex;
+	flex-direction: column;
+	/*justify-content: space-between;*/
+	align-items: center;
+	padding: 5px 8px;
+	border-bottom: 2px solid #dcdde1;
+	background: #fff;
+	font-size: 14px;
+	/*height: 34px;*/
+}
+
+.transaction-sec1 {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.transaction-sec2 {
+	width: 100%;
+	display: flex;
 }
 
 section.transactions-container .transaction .cat-box p {
@@ -258,21 +444,130 @@ section.transactions-container .transaction .cat-box p {
 	color: #009432;
 }
 
-section.transactions-container .transaction-header svg {
-	margin: 10px;
+.transaction .transaction-note-box {
+	width: 100%;
+	font-size: 12px;
+	border-top: 1.2px dotted rgba(255, 165, 2, 0.4);
+	padding: 5px 10px;
 }
 
-section.transactions-container .transaction {
+.transaction .transaction-note-box .transaction-note {
+	font-size: 11px;
+	font-style: italic;
+}
+
+
+section.transactions-container .balance-sec {
 	display: flex;
-	flex-direction: row;
+	height: 30px;
+	background: rgba(236, 204, 104,1.0);
+	font-size: 14px;
 	justify-content: space-between;
 	align-items: center;
+	padding: 10px;
+	position: relative;
 }
 
-section.transactions-container .transaction {
-	padding: 5px 8px;
-	border-bottom: 2px solid #dcdde1;
+
+section.transactions-container .balance-sec::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: transparent;
+	position: absolute;
+	bottom: 0px;
+	left: 1px;
+	box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.7);
+	z-index: 1;
+}
+
+
+/*Data complete*/
+
+
+
+section#data-complete {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
 	background: #fff;
-	/*display: flex;*/
+	display: block;
+}
+
+section#data-complete .close-data-complete {
+	height: 40px;
+	background: #486684;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 0 0 10px ;
+}
+
+section#data-complete .close-data-complete i {
+	display: block;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	cursor: pointer;
+}
+
+/*Calendar Styling*/
+/*tr {
+	display: flex;
 
 }
+
+td, th {
+	width: calc(100%/7);
+	
+	display: flex;
+	width: calc(100% / 7);
+	padding: 0 !important; 
+	margin: 0 !important;
+	justify-content: center;
+	align-items: center
+
+}
+
+thead {
+	border: none;
+}
+
+table {
+	display: flex;
+	flex-direction: column;
+
+}
+
+#top_calender
+{
+	width: 100%;
+	padding: 0;
+}
+
+.card {
+	height: auto !important;
+}
+
+.no_date
+{
+	background: rgba(0,0,0,0.1);
+}
+
+.right_date
+{
+	cursor: pointer;
+	transition: .3s linear;	
+}
+
+.right_date:hover
+{
+	background: rgba(0,0,0,0.2);
+	
+}*/
