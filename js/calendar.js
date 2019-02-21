@@ -1,12 +1,16 @@
+
 let today = new Date();
 let currentMonth = today.getMonth();
 let currentYear = today.getFullYear();
+let day = today.getDate();
 // let selectYear = document.getElementById("year");
 // let selectMonth = document.getElementById("month");
 
 let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 let monthAndYear = document.getElementById("monthAndYear");
+let monthAndYear2 = document.getElementById("monthAndYear2");
+
 showCalendar(currentMonth, currentYear);
 
 
@@ -14,12 +18,20 @@ function next() {
     currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
     currentMonth = (currentMonth + 1) % 12;
     showCalendar(currentMonth, currentYear);
+
+    show_income();
+    show_expenses();
+    show_balance();
 }
 
 function previous() {
     currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
     currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
     showCalendar(currentMonth, currentYear);
+
+    show_income();
+    show_expenses();
+    show_balance();
 }
 
 // function jump() {
@@ -27,6 +39,16 @@ function previous() {
 //     currentMonth = parseInt(selectMonth.value);
 //     showCalendar(currentMonth, currentYear);
 // }
+var $transaction_day = $('#transaction_day');
+
+function show_tansaction_day() {
+    $transaction_day.css('display','block');
+    // dia = this.innerText;
+    day_selected = new Date(currentYear, currentMonth, day);
+    document.getElementById('day_selected').innerHTML = day_selected.toDateString();
+    document.getElementById('day_selected_2').innerHTML = day_selected.toDateString();
+}
+
 
 function showCalendar(month, year) {
 
@@ -40,6 +62,7 @@ function showCalendar(month, year) {
 
     // filing data about month and in the page via DOM.
     monthAndYear.innerHTML = months[month] + " " + year;
+    monthAndYear2.innerHTML = months[month] + " " + year;
     // selectYear.value = year;
     // selectMonth.value = month;
 
@@ -102,6 +125,13 @@ function showCalendar(month, year) {
                 } // color today's date
 
                 cell.classList.add('right_date');
+                cell.addEventListener('click', function() {
+                    day = this.innerText;
+                    transaction_day(day);
+                    show_tansaction_day();
+                });
+
+                
 
                 cell.appendChild(cellText);
                 row.appendChild(cell);
@@ -115,3 +145,5 @@ function showCalendar(month, year) {
     }
 
 }
+
+

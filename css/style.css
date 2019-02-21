@@ -19,7 +19,7 @@ body {
 	left: 50%;
 	transform: translate(-50%,-50%);
 	padding: 0;
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
 }
 
 
@@ -150,6 +150,8 @@ body {
 	position: relative;
 }
 
+
+
 .comp-income-section,
 .comp-expenses-section,
 .comp-balance-section
@@ -274,12 +276,12 @@ body {
 } 
 
 .balance-graph .balance-plus-graph {
-	flex-basis: 30%;
+	/*flex-basis: 30%;*/
 	background: rgba(33, 140, 116,1.0);
 }
 
 .balance-graph .balance-minus-graph {
-	flex-basis: 70%;
+	/*flex-basis: 70%;*/
 	background: rgba(179, 57, 57,1.0);
 }
 
@@ -388,12 +390,15 @@ body {
 }
 
 /*Transactions section*/
-section.transactions-container {
+.transactions-container {
 	width: 100%;
 	height: 200px;
+	overflow-y: auto;
+	overflow-x: hidden;
+
 }
 
-section.transactions-container .transaction-header{
+.transactions-container .transaction-header{
 	width: 100%;
 	height: 30px;
 	background: #27ae60;
@@ -404,12 +409,12 @@ section.transactions-container .transaction-header{
 	align-items: center;
 }
 
-section.transactions-container .transaction-header svg {
+.transactions-container .transaction-header svg {
 	margin: 10px;
 	
 }
 
-section.transactions-container .transaction {
+.transactions-container .transaction {
 	display: flex;
 	flex-direction: column;
 	/*justify-content: space-between;*/
@@ -419,6 +424,10 @@ section.transactions-container .transaction {
 	background: #fff;
 	font-size: 14px;
 	/*height: 34px;*/
+}
+
+.data_day_transactions {
+
 }
 
 .transaction-sec1 {
@@ -434,7 +443,7 @@ section.transactions-container .transaction {
 	display: flex;
 }
 
-section.transactions-container .transaction .cat-box p {
+.transaction .cat-box p {
 	display: inline-block;
 }
 
@@ -457,7 +466,7 @@ section.transactions-container .transaction .cat-box p {
 }
 
 
-section.transactions-container .balance-sec {
+.balance-sec {
 	display: flex;
 	height: 30px;
 	background: rgba(236, 204, 104,1.0);
@@ -468,8 +477,7 @@ section.transactions-container .balance-sec {
 	position: relative;
 }
 
-
-section.transactions-container .balance-sec::after {
+.balance-sec::after {
 	content: '';
 	display: block;
 	width: 100%;
@@ -487,7 +495,10 @@ section.transactions-container .balance-sec::after {
 
 
 
-section#data-complete {
+section#data-complete,
+section#transaction_day,
+section#input_data
+{
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -495,10 +506,25 @@ section#data-complete {
 	left: 0;
 	z-index: 50;
 	background: #fff;
-	display: block;
+	display: none;
 }
 
-section#data-complete .close-data-complete {
+/*section#input_data,
+section.data-complete,
+section#transaction_day
+{
+	display: none;
+	left: 0%;
+}*/
+
+.go_input_data {
+
+}
+
+
+.close-data-complete,
+.close-data-complete
+{
 	height: 40px;
 	background: #486684;
 	color: #fff;
@@ -508,7 +534,7 @@ section#data-complete .close-data-complete {
 	padding: 0 0 0 10px ;
 }
 
-section#data-complete .close-data-complete i {
+.close-data-complete i {
 	display: block;
 	width: 40px;
 	height: 40px;
@@ -518,28 +544,28 @@ section#data-complete .close-data-complete i {
 }
 
 /*Calendar Styling*/
-/*tr {
+#calendar tr {
 	display: flex;
 
 }
 
-td, th {
+#calendar td, #calendar th {
 	width: calc(100%/7);
 	
 	display: flex;
 	width: calc(100% / 7);
-	padding: 0 !important; 
-	margin: 0 !important;
+	padding: 0; 
+	margin: 0;
 	justify-content: center;
 	align-items: center
 
 }
 
-thead {
+#calendar thead {
 	border: none;
 }
 
-table {
+#calendar {
 	display: flex;
 	flex-direction: column;
 
@@ -547,17 +573,18 @@ table {
 
 #top_calender
 {
-	width: 100%;
+	width: 375px;
+	background: #fff;
 	padding: 0;
 }
 
 .card {
-	height: auto !important;
+	height: auto;
 }
 
 .no_date
 {
-	background: rgba(0,0,0,0.1);
+	/*background: rgba(0,0,0,0.1);*/
 }
 
 .right_date
@@ -570,4 +597,87 @@ table {
 {
 	background: rgba(0,0,0,0.2);
 	
-}*/
+}
+
+#calendar_header
+{
+	display: flex;
+	width: 100%;
+	height: 30px;
+	background: #27ae60;
+	justify-content: space-between;
+}
+
+#previous,
+#next,
+#monthAndYear
+{
+	font-size: 12px;
+	width: 70px;
+	background: transparent;
+	border: none;
+	text-align: center;
+	line-height: 30px;
+	outline: none;
+}
+
+#previous,
+#next
+{
+	color: rgba(250,250,250, 0.8);
+	transition: .1s ease-out;
+}
+
+#previous:hover,
+#next:hover
+{
+	background: #219150;
+}
+
+#monthAndYear
+{
+	color: #fff;
+}
+
+.bg-info {
+	background: #ffdd99;	
+}
+
+
+.expenses_categories,
+{
+	display: none;
+}
+
+section#transaction_day .transactions-container
+{
+	height: 100%;
+}
+
+.go_input_data {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	color: #fff;
+	background: #fbc531;
+	bottom: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	line-height: 50px;
+	font-size: 25px;
+	box-shadow: 0 0 20px 0px #dcdde1;
+	cursor: pointer;
+}
+
+.go_input_data:active
+{
+	background: rgba(251, 197, 49,0.80);
+}
+
+.go_input_data:hover i{
+	transition: .3s ease-out;
+	transform: rotate(90deg);
+}
+
